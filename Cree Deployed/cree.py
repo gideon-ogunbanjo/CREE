@@ -27,8 +27,3 @@ y_pred = classifier.predict(X_test)
 from sklearn.metrics import accuracy_score
 score = accuracy_score(y_test, y_pred)
 
-# pickling the model
-import pickle
-pickle_out = open("classifier.pkl", "wb")
-pickle.dump(classifier, pickle_out)
-pickle_out.close()
