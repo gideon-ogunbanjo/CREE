@@ -13,3 +13,11 @@ y = df.iloc[:, -1]
 # splitting data into training and testing data with 30 % of data as testing data respectively
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state = 0)
+
+# importing the random forest classifier model and training it on the dataset
+from sklearn.ensemble import RandomForestClassifier
+classifier = RandomForestClassifier()
+classifier.fit(X_train, y_train)
+  
+# predicting on the test dataset
+y_pred = classifier.predict(X_test)
