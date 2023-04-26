@@ -21,3 +21,8 @@ classifier.fit(X_train, y_train)
   
 # predicting on the test dataset
 y_pred = classifier.predict(X_test)
+
+ 
+# finding out the accuracy
+from sklearn.metrics import accuracy_score
+score = accuracy_score(y_test, y_pred)
